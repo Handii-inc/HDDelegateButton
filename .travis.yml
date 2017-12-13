@@ -1,0 +1,10 @@
+osx_image: xcode9.1
+language: objective-c
+script:
+- pod install --project-directory=Example
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/HDDelegateButton.xcworkspace -scheme HDDelegateButton-Example -sdk iphonesimulator11.1 -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.1' ONLY_ACTIVE_ARCH=NO | xcpretty
+- pod lib lint
+notifications:
+  email: false
+  slack:
+    secure: QbOyqTEQKgP3iLj9FGjRjy6RLSDgdhztMVmODXsT0ljdVdOKfar2o+DuDgSyK0gOmgbqHHVY0PGerNZqurnRopn0t28KHCfv86MdmrjwJflzTPh/958KgrjccVc7S6+zAzl1FbyAt+/ygOVSxcHJ4TOo/eAioPGilRvUvBxOlJWEVl/erKPM5AqkUyDh8Bqdj+nl6OFarFba240779Y/9gtZSF5D9Im5sbtw8KwWZzttvqe6I7BogfyNql4L39z1yHMd9gBp8fxeMHfiYKNJVTU/VmezfCNSgXzxHx7RQy22864QtXEoNZ57+zU0KSpE0Air9urMD1imnIUTARCBg5dh8uDwgiN9edIhRVIGESHwo1vuBGPTI19gQeH0HGn8yzsVYyBWe7NyPG86WJUohftc2cjUM5KPxuNPKYgM8W/piHx+EVxlVWAiFPqAF8XeJOKfpTKg16COFuSbKtk76tsVO23ek69pjXu0IZwtNsbcOlQ+2cgj3nhZceOL1igS2wG15bGfqm5LsS6iXqnoT8bT//TzcO0L7z1Viv324shoFRuQm3ykmfRF4h/1D2TADEgZQBfKP5Em0s8A2cMaV9E+NwQg4gfzriuZz4cRIwLVkAAsX7g5OvZXFIVq/QA10HlX+3RqetSASeIPOdLtepweLdS7c4Rd0iFcRcJ2Qao=
