@@ -1,0 +1,10 @@
+use_frameworks!
+
+target 'HDDelegateButton_Example' do
+  pod 'HDDelegateButton', :path => '../'
+
+  target 'HDDelegateButton_Tests' do
+    pod 'HDDelegateButton', :path => '../'
+    pod 'Quick'
+  end
+end
