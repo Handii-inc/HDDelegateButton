@@ -1,9 +1,9 @@
-# DelegateButton
+# HDDelegateButton
 
-[![CI Status](http://img.shields.io/travis/Handii-inc/DelegateButton.svg?style=flat)](https://travis-ci.org/Handii-inc/DelegateButton)
-[![Version](https://img.shields.io/cocoapods/v/DelegateButton.svg?style=flat)](http://cocoapods.org/pods/DelegateButton)
-[![License](https://img.shields.io/cocoapods/l/DelegateButton.svg?style=flat)](http://cocoapods.org/pods/DelegateButton)
-[![Platform](https://img.shields.io/cocoapods/p/DelegateButton.svg?style=flat)](http://cocoapods.org/pods/DelegateButton)
+[![CI Status](http://img.shields.io/travis/Handii-inc/HDDelegateButton.svg?style=flat)](https://travis-ci.org/Handii-inc/HDDelegateButton)
+[![Version](https://img.shields.io/cocoapods/v/HDDelegateButton.svg?style=flat)](http://cocoapods.org/pods/HDDelegateButton)
+[![License](https://img.shields.io/cocoapods/l/HDDelegateButton.svg?style=flat)](http://cocoapods.org/pods/HDDelegateButton)
+[![Platform](https://img.shields.io/cocoapods/p/HDDelegateButton.svg?style=flat)](http://cocoapods.org/pods/HDDelegateButton)
 
 ## Description
 
@@ -18,7 +18,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ```swift
 class CustomViewController: UIViewController, ButtonDelegate {
     //MARK:- Components
-    private lazy var button = DelegateButton()
+    private lazy var button = HDDelegateButton()
 
     //MARK:- Life cycle events
     override func viewDidLoad()
@@ -38,11 +38,11 @@ class CustomViewController: UIViewController, ButtonDelegate {
 
 ## Installation
 
-DelegateButton is available through [CocoaPods](http://cocoapods.org). 
+HDDelegateButton is available through [CocoaPods](http://cocoapods.org). 
 To instal it, simply add the following line to your Podfile:
 
 ```ruby
-pod "DelegateButton"
+pod "HDDelegateButton"
 ```
 
 ## Author
@@ -51,4 +51,4 @@ Handii-inc, swift@handii.co.jp
 
 ## License
 
-DelegateButton is available under the MIT license. See the LICENSE file for more info.
+HDDelegateButton is available under the MIT license. See the LICENSE file for more info.
