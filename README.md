@@ -47,7 +47,7 @@ pod "HDDelegateButton"
 
 ## Author
 
-Handii-inc, swift@handii.co.jp
+Handii-inc, github@handii.co.jp
 
 ## License
 
