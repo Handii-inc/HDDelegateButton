@@ -9,7 +9,7 @@
 
 Redesign UIButton as delegate pattern.
 
-Let's change addTarget to ButtonDelegate n your code.
+Let's change addTarget to ButtonDelegate in your code.
 
 ## Usage
 
