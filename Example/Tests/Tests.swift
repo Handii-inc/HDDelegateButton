@@ -105,19 +105,19 @@ class MockButton: HDDelegateButton {
         
         switch controlEvents {
         case UIControlEvents.touchDownRepeat:
-            obj.touchDownRepeat?(sender: self)
+            obj.touchDownRepeat(sender: self)
         case UIControlEvents.touchDragEnter:
-            obj.touchDragEnter?(sender: self)
+            obj.touchDragEnter(sender: self)
         case UIControlEvents.touchDragExit:
-            obj.touchDragExit?(sender: self)
+            obj.touchDragExit(sender: self)
         case UIControlEvents.touchDragInside:
-            obj.touchDragInside?(sender: self)
+            obj.touchDragInside(sender: self)
         case UIControlEvents.touchDragOutside:
-            obj.touchDragOutside?(sender: self)
+            obj.touchDragOutside(sender: self)
         case UIControlEvents.touchUpInside:
-            obj.touchUpInside?(sender: self)
+            obj.touchUpInside(sender: self)
         case UIControlEvents.touchUpOutside:
-            obj.touchUpOutside?(sender: self)
+            obj.touchUpOutside(sender: self)
         default:
             break
         }
