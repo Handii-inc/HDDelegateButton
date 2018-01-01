@@ -73,52 +73,49 @@ open class HDDelegateButton: UIButton {
     @objc private func doAction(_ sender: UIButton,
                                 action methodOrNil: ((UIButton) -> Void)?)
     {
-        guard let method = methodOrNil else {
-            return  //do nothing
-        }
-        method(sender)
+        methodOrNil?(sender)
         return
     }
     
     @objc private func touchDownRepeat(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegatePointer?.touchDownRepeat)
+        self.doAction(sender, action: self.delegate?.touchDownRepeat)
         return
     }
     
     @objc private func touchDragEnter(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegatePointer?.touchDragEnter)
+        self.doAction(sender, action: self.delegate?.touchDragEnter)
         return
     }
     
     @objc private func touchDragExit(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegatePointer?.touchDragExit)
+        self.doAction(sender, action: self.delegate?.touchDragExit)
         return
     }
     
     @objc private func touchDragInside(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegatePointer?.touchDragInside)
+        self.doAction(sender, action: self.delegate?.touchDragInside)
         return
     }
     
     @objc private func touchDragOutside(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegatePointer?.touchDragOutside)
+        self.doAction(sender, action: self.delegate?.touchDragOutside)
         return
     }
     
     @objc private func touchUpInside(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegatePointer?.touchUpInside)
+        self.doAction(sender, action: self.delegate?.touchUpInside)
         return
     }
     
     @objc private func touchUpOutside(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegatePointer?.touchUpOutside)
+        self.doAction(sender, action: self.delegate?.touchUpOutside)
         return
     }
 }

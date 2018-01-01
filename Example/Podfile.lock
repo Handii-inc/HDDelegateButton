@@ -1,5 +1,5 @@
 PODS:
-  - HDDelegateButton (0.1.0)
+  - HDDelegateButton (0.1.1)
   - Quick (1.2.0)
 
 DEPENDENCIES:
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  HDDelegateButton: e72a75c8c9dd987454d6de625005f237a4486b89
+  HDDelegateButton: 5e3d9de6ce4bbd0c6a0a6b631944ef594967da30
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
 PODFILE CHECKSUM: a42a08816922f33ea8e7d7977379b946a703724f
