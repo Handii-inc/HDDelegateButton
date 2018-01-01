@@ -59,8 +59,8 @@ open class HDDelegateButton: UIButton {
 
     //MARK:- Methods
     open override func addTarget(_ target: Any?,
-                            action: Selector,
-                            for controlEvents: UIControlEvents)
+                                 action: Selector,
+                                 for controlEvents: UIControlEvents)
     {
         super.addTarget(target, action: action, for: controlEvents)
         print("It is prefer to set action through ButtonDelegate than through addTarget.")
@@ -70,52 +70,44 @@ open class HDDelegateButton: UIButton {
     //MARK:- Privates
     private weak var delegatePointer: ButtonDelegate?
     
-    @objc private func doAction(_ sender: UIButton,
-                                action methodOrNil: ((UIButton) -> Void)?)
-    {
-        methodOrNil?(sender)
-        return
-    }
-    
     @objc private func touchDownRepeat(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegate?.touchDownRepeat)
-        return
+        self.delegate?.touchDownRepeat(sender: sender)
     }
     
     @objc private func touchDragEnter(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegate?.touchDragEnter)
+        self.delegate?.touchDragEnter(sender: sender)
         return
     }
     
     @objc private func touchDragExit(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegate?.touchDragExit)
+        self.delegate?.touchDragExit(sender: sender)
         return
     }
     
     @objc private func touchDragInside(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegate?.touchDragInside)
+        self.delegate?.touchDragInside(sender: sender)
         return
     }
     
     @objc private func touchDragOutside(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegate?.touchDragOutside)
+        self.delegate?.touchDragOutside(sender: sender)
         return
     }
     
     @objc private func touchUpInside(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegate?.touchUpInside)
+        self.delegate?.touchUpInside(sender: sender)
         return
     }
     
     @objc private func touchUpOutside(sender: UIButton)
     {
-        self.doAction(sender, action: self.delegate?.touchUpOutside)
+        self.delegate?.touchUpOutside(sender: sender)
         return
     }
 }
